@@ -1,0 +1,36 @@
+{
+  "name": "fastify-rabbit",
+  "version": "1.0.0",
+  "description": "Fastify RabbitMQ plugin",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run lint && npm run unit",
+    "lint": "standard --fix",
+    "unit": "tap test.js",
+    "coverage": "npm run unit -- --cov --coverage-report=html",
+    "rabbit": "docker run -p 5672:5672 -p 15672:15672 rabbitmq:management"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexvanzyl/fastify-rabbit.git"
+  },
+  "keywords": [
+    "fastify",
+    "rabbitmq"
+  ],
+  "author": "Alexander van Zyl <vanzyl.alex@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alexvanzyl/fastify-rabbit/issues"
+  },
+  "homepage": "https://github.com/alexvanzyl/fastify-rabbit#readme",
+  "devDependencies": {
+    "fastify": "^2.5.0",
+    "standard": "^12.0.1",
+    "tap": "^14.3.0"
+  },
+  "dependencies": {
+    "amqplib": "^0.5.3",
+    "fastify-plugin": "^1.6.0"
+  }
+}
