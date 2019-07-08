@@ -1,6 +1,7 @@
 # fastify-rabbit
 
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](http://standardjs.com/)
+[![Build Status](https://travis-ci.org/alexvanzyl/fastify-rabbit.svg?branch=master)](https://travis-ci.org/alexvanzyl/fastify-rabbit)
 
 Fastify RabbitMQ connection plugin, this is a convenience wrapper around [amqplib](https://github.com/squaremo/amqp.node) library.
 
