@@ -78,7 +78,7 @@ following properties:
 - `channel` - reference to the [amqplib channel](http://www.squaremobius.net/amqp.node/channel_api.html#channel)
 
 ## Running tests
-To run tests RabbitMQ is required. You can either install it via a package manager or if you have docker installed you and spin up a RabbitMQ container with:
+To run tests RabbitMQ is required. You can either install it via a package manager or if you have docker installed you can spin up a RabbitMQ container with:
 ```
 npm run rabbit
 ```
