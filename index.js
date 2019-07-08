@@ -4,13 +4,10 @@ const fp = require('fastify-plugin')
 const amqp = require('amqplib')
 
 async function fastifyRabbitMQ (fastify, opts, next) {
-  opts = Object.assign({
-    url: 'amqp://localhost'
-  }, opts)
-
+  let connectionObject = (opts.url) ? opts.url : opts
   let conn, channel
   try {
-    conn = await amqp.connect(opts.url)
+    conn = await amqp.connect(connectionObject)
     channel = await conn.createChannel()
   } catch (err) {
     next(err)

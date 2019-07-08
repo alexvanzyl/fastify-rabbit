@@ -53,6 +53,22 @@ fastify.register(async function(fastify, opts) {
 }) 
 ```
 
+## Using connection object
+You can also connect using an object instead of an url, like so:
+```js
+fastify.register(require('fastify-rabbit'), {
+  protocol: 'amqp',
+  hostname: 'localhost',
+  port: 5672,
+  username: 'guest',
+  password: 'guest',
+  locale: 'en_US',
+  frameMax: 0,
+  heartbeat: 0,
+  vhost: '/',
+})
+```
+
 ## Reference
 This plugin decorates the `fastify` instance with a `rabbit` object. That object has the
 following properties:

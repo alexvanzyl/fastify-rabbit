@@ -28,6 +28,20 @@ test('{ url: VALID_URL }', t => {
   })
 })
 
+test('connecting with credentials', t => {
+  t.plan(4)
+
+  register(t, {
+    password: 'test',
+    username: 'test'
+  }, (err, fastify) => {
+    t.error(err)
+    t.ok(fastify.rabbit)
+    t.ok(fastify.rabbit.conn)
+    t.ok(fastify.rabbit.channel)
+  })
+})
+
 function register (t, options, callback) {
   const fastify = Fastify()
   t.teardown(() => fastify.close())
