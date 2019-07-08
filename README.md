@@ -65,7 +65,7 @@ fastify.register(require('fastify-rabbit'), {
   locale: 'en_US',
   frameMax: 0,
   heartbeat: 0,
-  vhost: '/',
+  vhost: '/'
 })
 ```
 

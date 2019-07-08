@@ -28,12 +28,19 @@ test('{ url: VALID_URL }', t => {
   })
 })
 
-test('connecting with credentials', t => {
+test('connecting with object', t => {
   t.plan(4)
 
   register(t, {
-    password: 'test',
-    username: 'test'
+    protocol: 'amqp',
+    hostname: 'localhost',
+    port: 5672,
+    username: 'guest',
+    password: 'guest',
+    locale: 'en_US',
+    frameMax: 0,
+    heartbeat: 0,
+    vhost: '/'
   }, (err, fastify) => {
     t.error(err)
     t.ok(fastify.rabbit)
